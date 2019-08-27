@@ -11,10 +11,8 @@ public class TreeOperation {
 	public int findMaxWidth() {
 		int maxHeight = 0;
 		int h = getTreeHeight();
-		System.out.println("h:"+h);
 		for(int i=0; i<h; i++ ) {
 			int temp = getWidthOfNode(tree.root, i);
-			System.out.println("temp: "+temp);
 			if(temp > maxHeight) maxHeight = temp;
 		}
 		return maxHeight;
