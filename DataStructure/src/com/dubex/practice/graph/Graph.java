@@ -62,7 +62,85 @@ public class Graph {
 		
 		five.connections.add(new Edge(five, six));
 	}
-		
 	
+	public void constructTopologicalSort() {
+		Node zero = new Node();
+		zero.name = "0";
+		
+		Node one = new Node();
+		one.name = "1";
+		
+		Node two = new Node();
+		two.name = "2";
+		
+		Node three = new Node();
+		three.name = "3";
+		
+		Node four = new Node();
+		four.name = "4";
+		
+		Node five = new Node();
+		five.name = "5";
+		
+		five.connections.add(new Edge(five, two));
+		five.connections.add(new Edge(five, zero));
+		
+		four.connections.add(new Edge(four, zero));
+		four.connections.add(new Edge(four, one));
+		two.connections.add(new Edge(two, three));
+		
+		nodes.put("0", zero);
+		nodes.put("1", one);
+		nodes.put("2", two);
+		nodes.put("3", three);
+		nodes.put("4", four);
+		nodes.put("5", five);
+//        g.addEdge(5, 2); 
+//        g.addEdge(5, 0); 
+//        g.addEdge(4, 0); 
+//        g.addEdge(4, 1); 
+//        g.addEdge(2, 3); 
+//        g.addEdge(3, 1); 
+	}
+	
+	public void constructGraphWithEdgeWeight() {
+		Node zero = new Node();
+		zero.name = "0";
+		
+		Node one = new Node();
+		one.name = "1";
+		
+		Node two = new Node();
+		two.name = "2";
+		
+		Node three = new Node();
+		three.name = "3";
+		
+		Node four = new Node();
+		four.name = "4";
+		
+		Node five = new Node();
+		five.name = "5";
+		
+		five.connections.add(new Edge(five, two));
+		five.connections.add(new Edge(five, zero));
+		
+		four.connections.add(new Edge(four, zero));
+		four.connections.add(new Edge(four, one));
+		two.connections.add(new Edge(two, three));
+		
+		nodes.put("0", zero);
+		nodes.put("1", one);
+		nodes.put("2", two);
+		nodes.put("3", three);
+		nodes.put("4", four);
+		nodes.put("5", five);
+//        g.addEdge(5, 2); 
+//        g.addEdge(5, 0); 
+//        g.addEdge(4, 0); 
+//        g.addEdge(4, 1); 
+//        g.addEdge(2, 3); 
+//        g.addEdge(3, 1); 
+	}	
 
 }
